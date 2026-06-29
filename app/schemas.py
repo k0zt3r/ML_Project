@@ -22,3 +22,4 @@ class HealthResponse(BaseModel):
     status: str
     documents: int
     chunks: int
+    vector_backend: str

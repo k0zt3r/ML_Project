@@ -33,6 +33,7 @@ def health():
         "status": "ok",
         "documents": len(rag.documents),
         "chunks": len(rag.chunks),
+        "vector_backend": rag.vector_store.backend,
     }
 
 

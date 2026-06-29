@@ -37,17 +37,20 @@ pip install -r requirements.txt
 
 ## Настройка LLM
 
-По умолчанию используется OpenRouter:
+По умолчанию используется OpenRouter. В качестве модели можно указать Cohere-модель,
+доступную в OpenRouter:
 
 ```bash
-export OPENROUTER_API_KEY="your_api_key"
+export LLM_PROVIDER="openrouter"
+export OPENROUTER_API_KEY="your_openrouter_api_key"
 export LLM_BASE_URL="https://openrouter.ai/api/v1"
-export LLM_MODEL="z-ai/glm-4.5-air:free"
+export LLM_MODEL="cohere/command-r-plus"
 ```
 
 Можно использовать другой OpenAI-compatible endpoint:
 
 ```bash
+export LLM_PROVIDER="openrouter"
 export OPENAI_API_KEY="your_api_key"
 export LLM_BASE_URL="https://api.openai.com/v1"
 export LLM_MODEL="gpt-4o-mini"
